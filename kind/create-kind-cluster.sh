@@ -17,3 +17,4 @@ wait
 # apply resources
 
 sh resources/ingress-nginx/apply.sh
+sh resources/argo-cd/apply.sh

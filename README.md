@@ -18,3 +18,8 @@ sh kind/create-kind-cluster.sh
 
 - [kubernetes](https://kubernetes.io/)
   - [kind](https://kind.sigs.k8s.io/)
+- [Helm](https://helm.sh/docs/)
+- [Argo CD](https://argoproj.github.io/cd/)
+  - [Helm chart](https://artifacthub.io/packages/helm/argo/argo-cd)
+  - [using-a-private-registry](https://kubernetes.io/docs/concepts/containers/images/#using-a-private-registry)
+  - [repositories](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repositories)

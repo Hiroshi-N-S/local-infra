@@ -18,6 +18,8 @@ sh kind/create-kind-cluster.sh
 
 - [kubernetes](https://kubernetes.io/)
   - [kind](https://kind.sigs.k8s.io/)
+  - [csi-driver-nfs](https://github.com/kubernetes-csi/csi-driver-nfs)
+    - [Helm chart](https://github.com/kubernetes-csi/csi-driver-nfs/tree/master/charts)
 - [Helm](https://helm.sh/docs/)
 - [Argo CD](https://argoproj.github.io/cd/)
   - [Helm chart](https://artifacthub.io/packages/helm/argo/argo-cd)

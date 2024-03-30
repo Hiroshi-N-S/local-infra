@@ -1,0 +1,10 @@
+driver:
+  name: nfs.csi.k8s.io
+feature:
+  enableFSGroupPolicy: true
+controller:
+  replicas: 1
+  runOnControlPlane: true
+  defaultOnDeletePolicy: delete
+externalSnapshotter:
+  enabled: false

@@ -12,3 +12,8 @@ kind create cluster --config config/kind-cluster.yaml
 
 sleep 10 &
 wait
+
+# --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+# apply resources
+
+sh resources/ingress-nginx/apply.sh

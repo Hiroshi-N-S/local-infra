@@ -1,6 +1,32 @@
+configs:
+  cm:
+    admin.enabled: "false"
+    users.anonymous.enabled: "false"
+    url: https://mint.local/cd
+    # https://argo-cd.readthedocs.io/en/stable/operator-manual/user-management/keycloak/
+    oidc.tls.insecure.skip.verify: "true"
+    oidc.config: |
+      name: Keycloak
+      issuer: https://mysticstorage.local:9443/realms/devops
+      clientID: argo-cd
+      clientSecret: CIhq5DJJw1ovAKL26x4NLUsSFJLo604N
+      requestedIDTokenClaims:
+        groups:
+          essential: true
+      requestedScopes:
+        - openid
+        - profile
+        - roles
+        - groups
+  rbac:
+    create: true
+    # https://argo-cd.readthedocs.io/en/stable/operator-manual/rbac/
+    policy.default: 'role:readonly'
+    policy.csv: |
+      g, argo-cd-admin, role:admin
+      g, argo-cd-readonly, role:readonly
 global:
   domain: "" # used as host by ingress
-configs:
 server:
   extraArgs:
     - --rootpath

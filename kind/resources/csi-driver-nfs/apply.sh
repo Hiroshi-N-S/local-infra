@@ -16,6 +16,11 @@ helm install \
   -f ${SCRIPT_DIR}/values.yaml
 
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+# apply volumesnapshotclass
+
+kubectl apply -f ${SCRIPT_DIR}/csi-nfs-snapshotclass.yaml
+
+# --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 # apply storageclass for synology nas
 
 kubectl apply -f ${SCRIPT_DIR}/synology-nfs-storageclass.yaml

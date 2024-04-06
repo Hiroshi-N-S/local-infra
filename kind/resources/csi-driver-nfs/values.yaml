@@ -7,4 +7,4 @@ controller:
   runOnControlPlane: true
   defaultOnDeletePolicy: delete
 externalSnapshotter:
-  enabled: false
+  enabled: true
